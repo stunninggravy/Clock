@@ -15,16 +15,49 @@
 <!-- Paste your code under this -->
     
     
-    <b>
- 
-        <a href="https://time.is/Los_Angeles" id="time_is_link" rel="nofollow" style="font-size:36px"></a>
-        <span id="Los_Angeles_z14e" style="font-size:44px;color:#ffffff"></span>
-        <script src="//widget.time.is/en.js"></script>
-        <script>
-        time_is_widget.init({Los_Angeles_z14e:{template:"DATE<br>TIME", time_format:"12hours:minutesAMPM", date_format:"dayname, monthname dnum, year"}});
-        </script>
+<h1 style="color:white;font-size:40px;">      
+         
+
+
+
+    <script type="text/javascript"> 
+        var myDate = new Date(); 
+        var myDay = myDate.getDay(); 
+        var myMonth = myDate.getMonth();
+        var myDayNum = myDate.getDate()
+        var myYear = myDate.getFullYear()
         
-    </b>
+        // Array of days. 
+        var weekday = ['Sunday', 'Monday', 'Tuesday', 
+            'Wednesday', 'Thursday', 'Friday', 'Saturday' 
+        ]; 
+        
+        // Array of months.
+        var month = ['January', 'February', 'March', 'April',
+        	'May', 'June', 'July', 'August', 'September',
+            'October', 'November', 'December'
+        ];
+        
+        
+        document.write(weekday[myDay] + ", " + month[myMonth] 
+        + " " + myDayNum + ", " + " " + myYear); 
+        document.write("<br/>"); 
+        
+        
+        // get hour value. 
+        var hours = myDate.getHours(); 
+        var ampm = hours >= 12 ? 'PM' : 'AM'; 
+        hours = hours % 12; 
+        hours = hours ? hours : 12; 
+        var minutes = myDate.getMinutes(); 
+        minutes = minutes < 10 ? '0' + minutes : minutes; 
+        var myTime = hours  +  ":" + minutes + ampm ; 
+        document.write(myTime); 
+    </script> 
+    
+    
+    
+</h1>
     
         
   
